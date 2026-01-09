@@ -1,4 +1,4 @@
-from backend.config import create_app, db
+from backend import create_app, db
 from backend.controllers.auth import auth_bp
 
 app = create_app()
