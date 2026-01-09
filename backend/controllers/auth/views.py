@@ -19,5 +19,4 @@ def login():
     user = User.query.filter_by(email=data['email']).first()
     if not user or not check_password_hash(user.password, data['password']):
         return jsonify({'message': 'Login failed'}), 401
-
     return jsonify({'message': 'Login successful'}), 200
